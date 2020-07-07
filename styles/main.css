@@ -1,5 +1,16 @@
 body {
   font-family: 'Noto Sans', sans-serif;
+  background-image: linear-gradient(
+    to top,
+    rgb(224, 240, 245),
+    rgb(252, 252, 252)
+  );
+}
+
+.title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 40px;
 }
 
 .main {
@@ -15,21 +26,74 @@ body {
 }
 
 .princess-container {
-  height: 200px;
   display: flex;
-  border: 1px solid red;
+  align-items: center;
+  background-color: white;
+  border-radius: 60px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 6px -6px grey;
 }
 
 .left-container {
-  height: 200px;
+  margin-left: 30px;
+  height: 275px;
   width: 200px;
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+.princes-pic {
+  margin-top: 20px;
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+}
+
+img {
+  width: 100%;
+  max-width: 150px;
+  border-radius: 100%;
+}
+
+.princess-name {
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+}
+
 .princess-tweet {
-  width: 625px;
+  margin-left: 25px;
+  width: 600px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 28px;
+  color: rgb(97, 97, 97);
+}
+.tweet-container {
+  display: flex;
+  align-items: flex-start;
+}
+.right-container {
+  margin-left: 65px;
+  margin-bottom: 75px;
+}
+.change-background {
+  color: rgb(201, 187, 0);
+}
+
+.counter {
+  display: flex;
+  width: 150px;
+  border: 1px red;
+  align-items: baseline;
+  justify-content: space-evenly;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.favs {
+  width: 800px;
+  display: flex;
+  justify-content: flex-end;
 }
