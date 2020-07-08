@@ -40,7 +40,7 @@ function renderPrincesses(arr) {
 }
 
 function addListeners() {
-  const elemsList = document.querySelectorAll('.tweet-container');
+  const elemsList = document.querySelectorAll('.right-container');
 
   for (const elem of elemsList) {
     if (elem !== undefined) {
@@ -50,9 +50,19 @@ function addListeners() {
 }
 
 function addToFavs(event) {
-  event.currentTarget.classList.toggle('change-background');
-  favorites = parseInt((favorites += 1));
-  counter.innerHTML = `${favorites} favs`;
+  const clickOnStar = event.currentTarget;
+  clickOnStar.classList.toggle('change-background');
+
+  if (clickOnStar.classList.contains('change-background')) {
+    favorites.push(clickOnStar);
+  } else {
+    let index = favorites.indexOf(clickOnStar);
+    if (index >= 0) {
+      favorites.splice(index, 1);
+    }
+  }
+  console.log(favorites.length);
+  counter.innerHTML = `${favorites.length} favs`;
 }
 
 publishTwits();
